@@ -11,9 +11,11 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # Every Vagrant virtual environment requires a box to build off of.
   config.vm.box = "parallels/ubuntu-14.04"
+  #config.vm.box = "ubuntu/trusty64"
 
   # Configurate the virtual machine to use 2GB of RAM
   config.vm.provider "parallels" do |v|
+  #config.vm.provider "virtualbox" do |v|
     v.memory = 2048
     v.cpus = 2
   end
