@@ -3,7 +3,7 @@
 
 # Vagrant stuff
 # Vagrantfile
-# .vagrant
+.vagrant
 
 # Cheffile
 Cheffile.lock
