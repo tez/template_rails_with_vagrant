@@ -1,12 +1,14 @@
 # OS-specific
 .DS_Store
 
-# Vagrant stuff
 # Vagrantfile
-.vagrant
+.vagrant/*
 
 # Cheffile
 Cheffile.lock
+
+# Berksfile
+Berksfile.lock
 
 # Bundler/Rubygems
 *.gem
@@ -29,12 +31,12 @@ test/tmp/
 *.rbc
 capybara-*.html
 .rspec
-/log
-/tmp
-/db/*.sqlite3
-/public/system
-/coverage/
-/spec/tmp
+log
+tmp
+db/*.sqlite3
+public/system
+coverage/
+spec/tmp
 **.orig
 rerun.txt
 pickle-email-*.html
