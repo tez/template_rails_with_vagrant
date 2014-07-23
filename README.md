@@ -5,7 +5,6 @@ _ Vagrant と Chef を使用してRailsの開発環境を構築する。
 ## Project Setup
 
 1. Vagrantのインストール
-2. 仮想化ツールのインストール
-3. vagrant-librarian-chefのインストール
-4. vagrant up
-5. vagrant provision
+2. Parallels or VirtulBoxのインストール
+3. vagrant-omnibusのインストール
+4. vagrant up --provision
