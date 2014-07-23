@@ -40,6 +40,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     chef.add_recipe "zsh"
     chef.add_recipe "prezto"
     chef.add_recipe "tmux"
+    chef.add_recipe "git-flow"
 
     # Install Ruby 2.1.2 and Bundler
     # Set an empty root password for MySQL to make things simple

@@ -11,8 +11,18 @@ git "/home/vagrant/.zprezto" do
   reference "master"
   user 'vagrant'
   group 'vagrant'
-  action :checkout
+  action :sync
   not_if "test -d /home/vagrant/.zprezto"
+end
+
+bash "zprezto_submodule" do
+  user 'vagrant'
+  group 'vagrant'
+  cwd "/home/vagrant/.zprezto"
+  code <<-EOH
+  git pull
+  git submodule update --init --recursive
+  EOH
 end
 
 template "zpreztorc" do
@@ -30,7 +40,7 @@ template "zshrc" do
 end
 
 template ".zshrc.local" do
-  path "/home/vagrant/zshrc.local"
+  path "/home/vagrant/.zshrc.local"
   owner "vagrant"
   group "vagrant"
   mode "0644"
